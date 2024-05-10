@@ -18,9 +18,18 @@ public class UserService {
 		return userRepository.findAll();
 		
 	}
+	
 
 	public User addUser(User user) {
-		// TODO Auto-generated method stub
 		return userRepository.save(user);
+	}
+
+
+	public boolean isUserNameAlreadyExists(String username) {
+		User user = userRepository.findByUsername(username);
+        if(user != null) {
+        	return true;
+        }
+        return false;
 	}
 }
