@@ -1,7 +1,5 @@
 package com.fsad.bookexchange.entity;
 
-import java.sql.Blob;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,9 +17,8 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long bookId;
-	private String bookName;
+	private String title;
 	private String author;
-	private Blob coverImage;
 	private String genre;
 	private String bookCondition;
 	private String availability;
